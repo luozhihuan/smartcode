@@ -13,9 +13,19 @@
 hs_err_pid*
 
 #过滤掉.settings和target文件夹
-/.settings/*
-/target/*
+.settings/
+target/
+/target
+.classpath
+.project
+.metadata/
+
+
+#过滤掉.idea和.DS_Store
+.idea/
+*.DS_Store
 
 #过滤掉.classpath文件和.project文件
 *.classpath
 *.project
+
