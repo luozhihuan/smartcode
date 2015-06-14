@@ -29,12 +29,8 @@ public class CreateDomainService implements ICreateDomainService{
     public void createDomain(Domain4CreateInfoModel createInfoModel) {
         String projectPath = null;
         String packageName = createInfoModel.getPackageName();
-        try {
-            File directory = new File("");// 参数为空
-            projectPath = directory.getCanonicalPath();
-        } catch (IOException e) {
-            e.printStackTrace();
-        }
+        File directory = new File("");// 参数为空
+        projectPath = createInfoModel.getProjectPath();
         packageName = packageName.replaceAll("\\.","/");
         createInfoModel.setDomainClassPath(projectPath + MAVEN_PATH + packageName + "/" + createInfoModel.getDomainClassName());
 

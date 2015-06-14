@@ -9,5 +9,9 @@ import java.util.List;
  */
 public interface ICreateDomainService {
 
+    /**
+     * 创建一个Domain类
+     * @param createInfoModel
+     */
     public void createDomain(Domain4CreateInfoModel createInfoModel);
 }

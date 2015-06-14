@@ -1,6 +1,7 @@
 package com.luozhihuan.smartcode.UI;
 
 import com.luozhihuan.smartcode.adapter.SmartMouseAdapter;
+import com.luozhihuan.smartcode.constants.Constant;
 import com.luozhihuan.smartcode.model.DBUIInfoModel;
 import com.luozhihuan.smartcode.service.impl.DBInfoMouseClickedService;
 
@@ -69,6 +70,9 @@ public class UILauncher extends JFrame {
 
 
     public void launch() {
+
+        FileChooser chooser = new FileChooser();
+        Constant.PROJECT_PATH = chooser.getChooseFilePath();
 //        init();
         //button
         confirmButton = new JButton("确认");

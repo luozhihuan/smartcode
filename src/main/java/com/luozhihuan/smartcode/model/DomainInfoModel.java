@@ -12,9 +12,9 @@ public class DomainInfoModel {
 
     public DomainInfoModel() {
     }
-
+    //字段名
     private String name;
-
+    //类型完整名
     private String columnClassName;
 
     public String getName() {

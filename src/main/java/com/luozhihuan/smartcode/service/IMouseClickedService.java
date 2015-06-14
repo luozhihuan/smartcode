@@ -5,5 +5,9 @@ package com.luozhihuan.smartcode.service;
  */
 public interface IMouseClickedService {
 
+
+    /**
+     * 点击按钮后的监听器触发事件
+     */
     public void mouseClicked();
 }

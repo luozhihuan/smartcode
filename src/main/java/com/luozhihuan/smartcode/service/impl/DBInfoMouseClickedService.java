@@ -1,5 +1,7 @@
 package com.luozhihuan.smartcode.service.impl;
 
+import com.luozhihuan.smartcode.UI.UIDBDomainDisplay;
+import com.luozhihuan.smartcode.constants.Constant;
 import com.luozhihuan.smartcode.model.DBInfoModel;
 import com.luozhihuan.smartcode.model.DBUIInfoModel;
 import com.luozhihuan.smartcode.model.Domain4CreateInfoModel;
@@ -27,6 +29,9 @@ public class DBInfoMouseClickedService implements IMouseClickedService {
 
     }
 
+    /**
+     * 鼠标点击事件
+     */
     public void mouseClicked() {
         this.dbInfoModel = new DBInfoModel(dbuiInfoModel);
         Connection conn = null;
@@ -51,7 +56,7 @@ public class DBInfoMouseClickedService implements IMouseClickedService {
             createInfoModel = new Domain4CreateInfoModel();
 
 
-            createInfoModel.setPackageName("com.luozhihuan.smartcode.test");
+//            createInfoModel.setPackageName("com.luozhihuan.smartcode.test");
 
             for (int i = 1; i <= data.getColumnCount(); i++) {
                 // 获得指定列的列名
@@ -73,8 +78,11 @@ public class DBInfoMouseClickedService implements IMouseClickedService {
         }
 
         //待删除，这里假设设置了生产的名称
-        createInfoModel.setDomainClassName("Test");
-        createDomainService.createDomain(createInfoModel);
+//        createInfoModel.setDomainClassName("Test");
+//        createDomainService.createDomain(createInfoModel);
+        Constant.createInfoModel = createInfoModel;
+        //跳入生成的界面
+        new UIDBDomainDisplay(createInfoModel);
 
 
     }
