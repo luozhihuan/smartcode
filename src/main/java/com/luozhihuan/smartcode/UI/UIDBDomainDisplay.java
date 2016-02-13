@@ -164,6 +164,8 @@ public class UIDBDomainDisplay extends JFrame {
         Set<String> packages = new HashSet<String>();
         LinkedList<String> packageNameList = new LinkedList<String>();
         String projectRoot = projectRootPath + "/src/main/java";
-        return getProjectAllPackages(packages, packageNameList, projectRoot);
+        Set<String> packagesName = getProjectAllPackages(packages, packageNameList, projectRoot);
+        Constant.PACKAGE_NAMES_SET = packagesName;
+        return packagesName;
     }
 }

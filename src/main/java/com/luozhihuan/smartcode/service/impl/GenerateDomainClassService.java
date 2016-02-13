@@ -1,5 +1,6 @@
 package com.luozhihuan.smartcode.service.impl;
 
+import com.luozhihuan.smartcode.UI.UIDAOService;
 import com.luozhihuan.smartcode.constants.Constant;
 import com.luozhihuan.smartcode.model.DBSelectModel;
 import com.luozhihuan.smartcode.model.Domain4CreateInfoModel;
@@ -32,6 +33,8 @@ public class GenerateDomainClassService implements IMouseClickedService {
         //将dbSelectModels转换为一个Domain4CreateInfoModel对象
 
         createDomainService.createDomain(convertTo(dbSelectModels));
+
+        new UIDAOService();
     }
 
     public Domain4CreateInfoModel convertTo(List<DBSelectModel> dbSelectModels){
